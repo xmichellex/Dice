@@ -7,7 +7,7 @@ void setup()
 void draw()
 {   
 
-	background(256, 256, 256);
+	background(12, 99, 102);
 	for(int y = 50; y <= 450; y+=50) { 
 		for(int x = 50; x <= 450; x+=50) { 
 			Die tom = new Die(x, y);	
