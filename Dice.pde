@@ -27,7 +27,7 @@ void mousePressed()
 class Die //models one single dice cube
 {
 	int myX, myY, dots; 
-	Die(int x, int y)  //constructor
+	Die(int x, int y)  
 	{
 		myX = x; 
 		myY = y; 
@@ -76,7 +76,6 @@ class Die //models one single dice cube
 	 }
 	
 	
-		System.out.println(dots);
 
 	 
 
