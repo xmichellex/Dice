@@ -17,23 +17,24 @@ public class Dice extends PApplet {
 public void setup()
 {
 	size(570, 570); 
-	background(256, 256, 256);
+	background(231, 255, 150);
 	noLoop();
 }
 public void draw()
 {   
-
-	background(12, 99, 102);
+	int everything = 0; 
+	background(231, 255, 150);
 	for(int y = 50; y <= 450; y+=50) { 
 		for(int x = 50; x <= 450; x+=50) { 
 			Die tom = new Die(x, y);	
 			tom.show();	
+			everything = everything + tom.dots; 
 
 		}		
-
-
 	}
-
+	textSize(25);
+	stroke(0); 
+	text("Sum: " + everything, 0, 570);
 
 }
 public void mousePressed()
@@ -50,7 +51,7 @@ class Die //models one single dice cube
 	}
 	public void roll()
 	{
-		int dots = (int)(Math.random()*6)+1;
+		dots = (int)(Math.random()*6)+1;
 		
 		if(dots == 1)
 	 { 
